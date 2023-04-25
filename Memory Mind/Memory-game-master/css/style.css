@@ -1,0 +1,203 @@
+html {
+  box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+body {
+  display: block;
+  margin: 0;
+  padding: 0;
+
+  font-family: 'Turret Road', 'Arial', cursive;
+  font-size: 18px;
+  background-image: 22px;
+  font-weight: 500;
+  
+  color: #ffffff;
+
+  background-image: url('../img/bg-pattern-game3.jpg');
+  transition: 2s;
+}
+
+.page-wrapper {
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+
+  background-color: #000000;
+  z-index: 100;
+  
+  background-image: url('../img/bg-pattern.gif');
+  
+}
+
+
+
+.page-wrapper--hidden {
+  animation: out 700ms ease both;
+}
+
+.page-wrapper__title {
+  display: block;
+  margin: 0;
+  margin-top: 70px;
+  padding: 0;
+
+  font-family: 'Turret Road', 'Arial', cursive;
+  font-size: 50px;
+  line-height: 52px;
+  font-weight: 700;
+
+  text-align: center;
+  color: #ffffff;
+}
+
+.page-wrapper__btn {
+  display: block;
+  width: 250px;
+  margin: 0;
+  margin-top: 10px;
+  padding: 0;
+  padding: 10px 0px;
+
+  font-family: 'Turret Road', 'Arial', cursive;
+  font-size: 24px;
+  line-height: 28px;
+  font-weight: 700;
+
+  border: none;
+  box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.75);
+  transition: 0.5s;
+}
+
+.page-wrapper__btn:hover {
+  background-color: steelblue;
+  cursor: pointer;
+  transition: 0.5s;
+}
+
+.container {
+  display: block;
+  width: 1024px;
+  margin: 0;
+  margin: 0 auto;
+  padding: 0;
+}
+
+.app {
+  display: block;
+  margin: 0;
+  padding: 0;
+}
+
+.app__text {
+  display: block;
+  margin: 0;
+  padding: 0;
+
+  font-family: 'Turret Road', 'Arial', cursive;
+  font-size: 24px;
+  line-height: 28px;
+  font-weight: 700;
+  text-align: center;
+  text-shadow: 3px 3px 3px #000000;;
+}
+
+.app__cards {
+  display: flex;
+  /* justify-content: space-between; */
+  flex-wrap: wrap;
+  margin: 0;
+  margin-top: 100px;
+  padding: 0;
+}
+
+.app__card {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 47px;
+  height: 47px;
+  margin: 0;
+  margin: 2px;
+  padding: 0;
+
+  font-family: 'Turret Road', 'Arial', cursive;
+  font-size: 20px;
+  line-height: 22px;
+  font-weight: 500;
+
+  color: transparent;
+  transform: rotateY(180deg);
+  background-color: lightcoral;
+  border: none;
+}
+
+.app__card:hover {
+  cursor: pointer;
+}
+
+.app__start-again {
+  display: block;
+  width: 250px;
+  margin: 0;
+  margin: 0 auto;
+  margin-top: 15px;
+  padding: 0;
+  padding: 10px 0px;
+
+  font-family: 'Turret Road', 'Arial', cursive;
+  font-size: 20px;
+  line-height: 22px;
+  font-weight: 700;
+
+  border: none;
+  box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.75);
+  transition: 0.5s;
+}
+
+.app__start-again:hover {
+  background-color: steelblue;
+  cursor: pointer;
+  transition: 0.5s;
+}
+
+.hidden {
+  display: none;
+}
+
+.hidden:hover {
+  cursor: default;
+}
+
+.false {
+  color: transparent;
+  transform: rotateY(180deg);
+}
+
+.clicked {
+  color: #000000;
+  transform: rotateY(0deg);
+  animation-name: rotate;
+  animation-duration: 0.2s;
+}
+
+@keyframes rotate {
+  0% {transform: rotateY(180deg)};
+  100% {transform: rotateY(0deg)}
+}
+
+@keyframes out {
+  0% { transform: scale(1) rotate(0); opacity: 1; visibility: visible; }
+  100% { transform: scale(0) rotate(-12deg); opacity: 0; visibility: hidden;  }
+}
